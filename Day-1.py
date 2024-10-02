@@ -1,1 +1,5 @@
-print("Day 1")
+print('city:')
+city = input()
+print('pet:')
+pet = input()
+print(city+' '+pet)
