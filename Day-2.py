@@ -42,3 +42,14 @@ print(round(bmi,2))
 
 #f-string does not require any change of datatype
 print(f"Your score is {bmi}")
+
+#Final Project
+print("Welcome to tip calculator")
+bill=float(input("Whats the total bill?"))
+tip=int(input("How much tip would you like to give? 10, 12 or 15?"))
+pax=int(input("How many people to split the bill?"))
+tip_percent=tip/100
+total=bill+bill*tip_percent
+bill_pp=total/pax
+final_amount=round(bill_pp,2)
+print(f"Each person should pay : S$ {final_amount}")
