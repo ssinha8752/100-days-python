@@ -7,3 +7,4 @@
 6. and counter + 1
 7.once wrong, game=false
 8. Show score
+9. Show the output
