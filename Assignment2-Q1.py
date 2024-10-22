@@ -1,18 +1,21 @@
 import re
 class Q1:
+
     def start_search(self, d):
-        # Define the correct regex pattern
-        self.pattern = r'(?<!00\.)\b\d{1,3}\.\d{2}\b'
+
+        ### REPLACE THE BELOW LINE WITH YOUR CODE ###
+        ### DO NOT EDIT ANYTHING ELSE IN THIS FUNCTION ###
+        self.pattern = r'(?<!00\.)\b(?!00)\d{1,3}\.\d{2}\b'
         next = "00.00+00.00"
         while next:
             p = re.compile(self.pattern)
-            if next in d:
-                m = p.findall(d[next])
-            else:
-                break
+            print(p)
+            m = p.findall(d[next])
+            print(m)
             if not m:
                 break
             next = "+".join(m)
+
         return next
 
 
