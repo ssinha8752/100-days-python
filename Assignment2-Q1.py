@@ -10,7 +10,7 @@ class Q1:
         #self.pattern = r'(?<!00\.)\b(?!00)(?<!\d)(\d{2}\.\d{2})(?!\d)\b'
         #self.pattern = r'(?<!00\.)\b(?!00)(?<!\d)(\d{2}\.\d{2})(?!\d)(?=\D|$)'
         #self.pattern  = r'(?<!\d)([1-9]\d?\.\d{2})(?=\D|$)'
-        self.pattern = r'(?:^|[^\d])([1-9]\d?\.\d{2})(?:\D|$)'
+        self.pattern = r'(?:^|\D)([^00]{2}\.\d{2})(?:\D|$)'
         next = "00.00+00.00"
         while next:
             p = re.compile(self.pattern)
