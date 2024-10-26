@@ -10,4 +10,12 @@ with open ("./.venv/weather.csv") as datafile:
     print(temp)
 
 df=pd.read_csv("weather_data.csv")
-print(df)
+print(df['temp'])
+print(df['temp'].to_dict())
+print(df['temp'].mean())
+print(df['temp'].max())
+print(df[df.day=='Monday'])
+print(df[df.temp==max(df['temp'])])
+mon=df[df.day=='Monday']
+print(mon.condition)
+print((mon.temp[0]*9/5)+32)
