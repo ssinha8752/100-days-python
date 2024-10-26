@@ -9,5 +9,5 @@ with open ("./.venv/weather.csv") as datafile:
         temp.append(int(row[1]) if row[1]!='temp' else "")
     print(temp)
 
-df=pd.read_csv("weather.csv")
+df=pd.read_csv("weather_data.csv")
 print(df)
