@@ -57,3 +57,10 @@ if n==rev_n:
     true
 else:
     false
+
+
+#counting in dictionary
+from collections import Counter
+
+d = {1: "dog", 2: "cat", 3: "dog", 4: "elephant"}
+counts = Counter(d.values())
