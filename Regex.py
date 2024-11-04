@@ -33,6 +33,7 @@ print(result6)
 result6=re.search(r".+\s(.+ex).+.(\d\d\s.+).",str)
 print(result6)
 print(result6.groups())
+print(result6.group(0))
 print(result6.group(1))
 print(result6.group(2))
 
