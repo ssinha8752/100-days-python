@@ -25,3 +25,4 @@ print(result1)
 
 result1=re.findall(r"\bEuro\b",str, re.M)
 print(result1)
+
