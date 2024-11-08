@@ -6,3 +6,15 @@ def myfunc(*args):
     return ans
 
 print(myfunc(-2,4))
+
+
+def fun(word):
+    res=''
+    for i,v in enumerate(word):
+        if i%2==0:
+            res+=v.upper()
+        else:
+            res+=v.lower()
+    print(res)
+
+fun('Shubahm')
