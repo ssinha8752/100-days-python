@@ -5,4 +5,4 @@ def myfunc(*args):
             ans.append(i)
     return ans
 
-print(myfunc(5,6,7,8))
+print(myfunc(-2,4))
