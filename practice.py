@@ -17,4 +17,4 @@ def fun(word):
             res+=v.lower()
     print(res)
 
-fun('Shubahm')
+fun('Shubham')
