@@ -30,3 +30,4 @@ class ll:
 my_ll=ll(1)
 my_ll.append(2)
 my_ll.show()
+my_ll.append(4)
