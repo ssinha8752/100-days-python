@@ -26,8 +26,29 @@ class ll:
             print(temp.value)
             temp=temp.next
 
+    def pop(self):
+        if self.length==0:
+            return None
+        temp = self.head
+        pre = self.head
+        while temp.next is not None:
+            pre = temp
+            temp = temp.next
+        pre.next=None
+        self.tail=pre
+        self.length-=1
+        if self.length==0:
+            self.head=None
+            self.tail=None
+        return temp.value
+
 
 my_ll=ll(1)
 my_ll.append(2)
-my_ll.show()
 my_ll.append(4)
+my_ll.show()
+my_ll.pop()
+my_ll.pop()
+my_ll.pop()
+print(my_ll.pop())
+my_ll.show()
