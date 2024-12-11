@@ -42,13 +42,19 @@ class ll:
             self.tail=None
         return temp.value
 
+    def prepend(self,value):
+        new_node=Node(value)
+        if self.length==0:
+            self.head=new_node
+            self.tail=new_node
+        else:
+            new_node.next=self.head
+            self.head=new_node
+        self.length+=1
+
 
 my_ll=ll(1)
 my_ll.append(2)
 my_ll.append(4)
-my_ll.show()
-my_ll.pop()
-my_ll.pop()
-my_ll.pop()
-print(my_ll.pop())
+my_ll.prepend(500)
 my_ll.show()
