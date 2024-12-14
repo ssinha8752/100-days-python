@@ -63,10 +63,18 @@ class ll:
             self.tail=None
         return temp
 
+    def get(self,index):
+        if index<0 or index>=self.length:
+            return None
+        else:
+            temp = self.head
+            for _ in range(index):
+                temp=temp.next
+            return temp.value
+
 my_ll=ll(1)
 my_ll.append(2)
 my_ll.append(4)
 my_ll.prepend(500)
 my_ll.show()
-my_ll.pop_first()
-my_ll.show()
+print(my_ll.get(0))
