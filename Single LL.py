@@ -72,9 +72,28 @@ class ll:
                 temp=temp.next
             return temp.value
 
+    def set_value(self, index, val):
+        if index<0 or index>self.length:
+            return None
+        else:
+            temp=self.head
+            for _ in range(index):
+                temp=temp.next
+            temp.value=val
+            return True
+
+    def set_value1(self,index,val):
+        temp=self.get(index)
+        if temp:
+            temp.value=val
+            return True
+        return False
+
 my_ll=ll(1)
 my_ll.append(2)
 my_ll.append(4)
 my_ll.prepend(500)
 my_ll.show()
 print(my_ll.get(0))
+print(my_ll.set_value(0,0))
+my_ll.show()
