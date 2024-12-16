@@ -70,7 +70,7 @@ class ll:
             temp = self.head
             for _ in range(index):
                 temp=temp.next
-            return temp.value
+            return temp
 
     def set_value(self, index, val):
         if index<0 or index>self.length:
@@ -89,11 +89,26 @@ class ll:
             return True
         return False
 
+    def insert(self, index, val):
+        node=Node(val)
+        if index<0 or index>self.length:
+            return None
+        if index==0:
+            return self.prepend(val)
+        if index==self.length:
+            return self.append(val)
+        temp=self.get(index-1)
+        node.next=temp.next
+        temp.next=node
+        self.length+=1
+        return True
+
 my_ll=ll(1)
 my_ll.append(2)
 my_ll.append(4)
 my_ll.prepend(500)
 my_ll.show()
 print(my_ll.get(0))
-print(my_ll.set_value(0,0))
+print(my_ll.set_value(0,10))
+my_ll.insert(2,999)
 my_ll.show()
