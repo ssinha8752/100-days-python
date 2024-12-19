@@ -117,6 +117,18 @@ class ll:
         self.length-=1
         return temp
 
+    def reverse(self):
+        temp=self.head
+        self.head=self.tail
+        self.tail=temp
+        after=temp.next
+        before=None
+        for _ in range(self.length):
+            after=temp.next
+            temp.next=before
+            before=temp
+            temp=after
+        return temp
 
 my_ll=ll(1)
 my_ll.append(2)
