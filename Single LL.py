@@ -128,7 +128,6 @@ class ll:
             temp.next=before
             before=temp
             temp=after
-        return temp
 
 my_ll=ll(1)
 my_ll.append(2)
@@ -139,5 +138,5 @@ print(my_ll.get(0))
 print(my_ll.set_value(0,10))
 my_ll.insert(2,999)
 my_ll.show()
-my_ll.remove(2)
+my_ll.reverse()
 my_ll.show()
