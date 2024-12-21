@@ -31,13 +31,21 @@ class LinkedList:
         self.length += 1
         return True
 
-    ### WRITE POP METHOD HERE ###
-    #                           #
-    #                           #
-    #                           #
-    #                           #
-    #############################
-
+    def pop(self):
+        if self.length==0:
+            return None
+        temp=self.head
+        pre=self.head
+        while temp.next is not None:
+            pre=temp
+            temp=temp.next
+        pre.next=None
+        self.tail=pre
+        self.length-=1
+        if self.length==0:
+            self.head=None
+            self.tail=None
+        return temp
 
 ##########################################################
 ##   Test code below will print output to "User logs"   ##
