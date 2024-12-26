@@ -55,12 +55,16 @@ class LinkedList:
         self.length += 1
         return True
 
-    ## WRITE POP_FIRST METHOD HERE ##
-    #                               #
-    #                               #
-    #                               #
-    #                               #
-    #################################
+    def pop_first(self):
+        if self.length == 0:
+            return None
+        temp = self.head
+        self.head = self.head.next
+        temp.next = None
+        self.length -= 1
+        if self.length == 0:
+            self.tail = None
+        return temp
 
 
 my_linked_list = LinkedList(2)
@@ -72,12 +76,3 @@ print(my_linked_list.pop_first().value)
 print(my_linked_list.pop_first().value)
 # (0) Items - Returns None
 print(my_linked_list.pop_first())
-
-"""
-    EXPECTED OUTPUT:
-    ----------------
-    2
-    1
-    None
-
-"""
