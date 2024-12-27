@@ -66,12 +66,14 @@ class LinkedList:
             self.tail = None
         return temp
 
-    ### WRITE GET METHOD HERE ###
-    #                           #
-    #                           #
-    #                           #
-    #                           #
-    #############################
+    def get(self,value):
+        if value<0 or value>=self.length:
+            return None
+        else:
+            temp = self.head
+            for _ in range(value):
+                temp=temp.next
+            return temp
 
 
 my_linked_list = LinkedList(0)
