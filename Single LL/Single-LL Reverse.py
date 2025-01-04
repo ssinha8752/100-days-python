@@ -112,12 +112,13 @@ class LinkedList:
     def reverse(self):
         curr=self.head
         prev=None
+        self.tail=self.head
         while curr is not None:
             nextNode=curr.next
             curr.next=prev
             prev=curr
             curr=nextNode
-
+        self.head=prev
 
 my_linked_list = LinkedList(1)
 my_linked_list.append(2)
