@@ -20,12 +20,18 @@ class LinkedList:
             self.tail = new_node
         return True
 
-    # WRITE FIND_MIDDLE_NODE METHOD HERE #
-    #                                    #
-    #                                    #
-    #                                    #
-    #                                    #
-    ######################################
+    def find_middle_node(self):
+        temp=self.head
+        mid=self.head
+        length=0
+        if self.head==None:
+            return None
+        while temp is not None:
+            length+=1
+            temp=temp.next
+        for _ in range(length//2):
+            mid=mid.next
+        return mid
 
 
 my_linked_list = LinkedList(1)
