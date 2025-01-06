@@ -22,6 +22,17 @@ class LinkedList:
         self.length += 1
         return True
 
+    def has_loop(self):
+        nodeSet=set()
+        if self.length==0:
+            return None
+        temp=self.head
+        while temp is not None:
+            if temp in nodeSet:
+                return True
+            nodeSet.add(temp)
+            temp=temp.next
+        return False
 
 
 
