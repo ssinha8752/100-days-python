@@ -27,6 +27,8 @@ def find_kth_from_end(self,val):
     while curr is not None:
         curr=curr.next
         len+=1
+    if val>len or val<0:
+        return None
     k=len-val
     temp=self.head
     l=0
