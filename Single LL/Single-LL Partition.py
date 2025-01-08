@@ -32,39 +32,24 @@ class LinkedList:
         self.tail = None
         self.length = 0
 
-
-#   +===================================================+
-#   |               WRITE YOUR CODE HERE                |
-#   | Description:                                      |
-#   | - This method partitions a linked list around a   |
-#   |   value `x`.                                      |
-#   | - It rearranges the nodes so that all nodes less  |
-#   |   than `x` come before all nodes greater or equal |
-#   |   to `x`.                                         |
-#   |                                                   |
-#   | Tips:                                             |
-#   | - We use two dummy nodes, `dummy1` and `dummy2`,  |
-#   |   to build two separate lists: one for elements   |
-#   |   smaller than `x` and one for elements greater   |
-#   |   or equal to `x`.                                |
-#   | - `prev1` and `prev2` help us keep track of the   |
-#   |   last nodes in these lists.                      |
-#   | - Finally, we merge these two lists by setting    |
-#   |   `prev1.next = dummy2.next`.                     |
-#   | - The head of the resulting list becomes          |
-#   |   `dummy1.next`.                                  |
-#   +===================================================+
-
-
-#  +=====================================================+
-#  |                                                     |
-#  |          THE TEST CODE BELOW WILL PRINT             |
-#  |              OUTPUT TO "USER LOGS"                  |
-#  |                                                     |
-#  |  Use the output to test and troubleshoot your code  |
-#  |                                                     |
-#  +=====================================================+
-
+    def partition_list(self,val):
+        dummy1=Node(0)
+        dummy2=Node(0)
+        prev1=dummy1
+        prev2=dummy2
+        current=self.head
+        while current:
+            if current.value<val:
+                prev1.next=current
+                prev1=prev1.next
+            else:
+                prev2.next = current
+                prev2 = prev2.next
+            current=current.next
+        prev2.next=None
+        prev1.next=dummy2.next
+        self.head=dummy1.next
+        return self.head
 
 # Function to convert linked list to Python list
 def linkedlist_to_list(head):
