@@ -32,6 +32,21 @@ class LinkedList:
                 temp = temp.next
             print(" -> ".join(values))
 
+
+    def remove_duplicates(self):
+        if self.head is None:
+            return None
+        temp=self.head
+        nodeSet=set()
+        prev=None
+        while temp is not None:
+             if temp.value in nodeSet:
+                prev.next=temp.next
+             else:
+                 nodeSet.add(temp.value)
+                 prev=temp
+             temp=temp.next
+
     #   +===================================================+
     #   |                  WRITE YOUR CODE HERE             |
     #   | Description:                                      |
