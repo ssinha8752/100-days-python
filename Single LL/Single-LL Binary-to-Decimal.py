@@ -32,12 +32,18 @@ class LinkedList:
                 temp = temp.next
             print(" -> ".join(values))
 
-            # WRITE BINARY_TO_DECIMAL METHOD HERE #
-    #                                     #
-    #                                     #
-    #                                     #
-    #                                     #
-    #######################################
+    def binary_to_decimal(self):
+        arr=[]
+        temp=self.head
+        while temp is not None:
+            arr.append(temp.value)
+            temp=temp.next
+        l=len(arr)
+        dec=0
+        for i in arr:
+            dec=dec+i*pow(2,l-1)
+            l-=1
+        return dec
 
 
 # Test case 1: Binary number 110 = Decimal number 6
