@@ -32,4 +32,5 @@ class DoublyLinkedList:
         return True
 
 my_dll=DoublyLinkedList(7)
+my_dll.append(8)
 my_dll.print_list()
