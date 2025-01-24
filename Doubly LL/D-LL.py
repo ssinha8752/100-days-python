@@ -71,6 +71,16 @@ class DoublyLinkedList:
         self.length-=1
         return True
 
+    def get(self,pos):
+        if self.length==0 or pos>self.length:
+            return None
+        temp=self.head
+        p=0
+        while temp is not None and p<pos:
+            temp=temp.next
+            p+=1
+        return temp.value
+
 
 my_dll=DoublyLinkedList(7)
 my_dll.append(8)
@@ -78,4 +88,5 @@ my_dll.append(9)
 my_dll.pop()
 my_dll.prepend(3)
 my_dll.pop_first()
+print(my_dll.get(1))
 my_dll.print_list()
