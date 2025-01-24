@@ -72,7 +72,7 @@ class DoublyLinkedList:
         return True
 
     def get(self,pos):
-        if self.length==0 or pos>self.length:
+        if self.length==0 or pos>self.length or pos<0:
             return None
         temp=self.head
         p=0
