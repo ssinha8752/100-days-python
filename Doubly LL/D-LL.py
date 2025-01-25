@@ -79,7 +79,16 @@ class DoublyLinkedList:
         while temp is not None and p<pos:
             temp=temp.next
             p+=1
-        return temp.value
+        return temp
+
+    def set_value(self,pos,val):
+        if self.length==0 or pos>self.length or pos<0:
+            return None
+        temp=self.get(pos)
+        if temp:
+            temp.value=val
+            return True
+        return False
 
 
 my_dll=DoublyLinkedList(7)
@@ -89,4 +98,5 @@ my_dll.pop()
 my_dll.prepend(3)
 my_dll.pop_first()
 print(my_dll.get(1))
+my_dll.set_value(1,10)
 my_dll.print_list()
