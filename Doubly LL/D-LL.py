@@ -111,9 +111,9 @@ class DoublyLinkedList:
         if pos<0 or pos>=self.length:
             return None
         elif pos==0:
-            return self.pop_first(pos)
-        elif pos==self.length:
-            return self.pop(pos)
+            return self.pop_first()
+        elif pos==self.length-1:
+            return self.pop()
         temp=self.get(pos)
         before=temp.prev
         after=temp.next
@@ -134,4 +134,5 @@ my_dll.pop_first()
 print(my_dll.get(1))
 my_dll.set_value(1,10)
 my_dll.insert(1,20)
+my_dll.remove(2)
 my_dll.print_list()
