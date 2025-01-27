@@ -107,6 +107,23 @@ class DoublyLinkedList:
         self.length+=1
         return True
 
+    def remove(self,pos):
+        if pos<0 or pos>=self.length:
+            return None
+        elif pos==0:
+            return self.pop_first(pos)
+        elif pos==self.length:
+            return self.pop(pos)
+        temp=self.get(pos)
+        before=temp.prev
+        after=temp.next
+        before.next=after
+        after.prev=before
+        temp.next=None
+        temp.prev=None
+        self.length-=1
+        return temp
+
 
 my_dll=DoublyLinkedList(7)
 my_dll.append(8)
@@ -116,5 +133,5 @@ my_dll.prepend(3)
 my_dll.pop_first()
 print(my_dll.get(1))
 my_dll.set_value(1,10)
-my_dll.insert(3,20)
+my_dll.insert(1,20)
 my_dll.print_list()
