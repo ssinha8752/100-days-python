@@ -70,12 +70,15 @@ class DoublyLinkedList:
         self.length -= 1
         return temp
 
-    ### WRITE GET METHOD HERE ###
-    #                           #
-    #                           #
-    #                           #
-    #                           #
-    #############################
+    def get(self,pos):
+        if pos<0 or pos>=self.length or self.length==0:
+            return None
+        temp=self.head
+        p=0
+        while temp is not None and p<pos:
+            temp=temp.next
+            p+=1
+        return temp
 
 
 my_doubly_linked_list = DoublyLinkedList(0)
