@@ -83,12 +83,14 @@ class DoublyLinkedList:
                 temp = temp.prev
         return temp
 
-    ## WRITE SET_VALUE METHOD HERE ##
-    #                               #
-    #                               #
-    #                               #
-    #                               #
-    #################################
+    def set_value(self,pos,val):
+        if self.length==0 or pos<0 or pos>=self.length:
+            return None
+        temp=self.get(pos)
+        if temp:
+            temp.value=val
+            return True
+        return False
 
 
 my_doubly_linked_list = DoublyLinkedList(11)
