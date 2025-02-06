@@ -110,12 +110,22 @@ class DoublyLinkedList:
         self.length += 1
         return True
 
-        ## WRITE REMOVE METHOD HERE ##
-    #                            #
-    #                            #
-    #                            #
-    #                            #
-    ##############################
+    def remove(self,pos):
+        if pos<0 or pos>self.length:
+            return None
+        elif pos==0:
+            return self.pop_first()
+        elif pos==self.length-1:
+            return self.pop()
+        temp=self.get(pos)
+        before=temp.prev
+        after=temp.next
+        temp.next = None
+        temp.prev = None
+        before.next=after
+        after.prev=before
+        self.length-=1
+        return temp
 
 
 my_doubly_linked_list = DoublyLinkedList(1)
