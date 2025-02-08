@@ -31,6 +31,8 @@ class DoublyLinkedList:
         return True
 
     def swap_first_last(self):
+        if self.head==None:
+            return None
         temp=Node(0)
         first=self.head
         last=self.tail
