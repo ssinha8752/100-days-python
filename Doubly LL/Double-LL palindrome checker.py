@@ -30,12 +30,15 @@ class DoublyLinkedList:
         self.length += 1
         return True
 
-    # WRITE IS_PALINDROME METHOD HERE #
-    #                                 #
-    #                                 #
-    #                                 #
-    #                                 #
-    ###################################
+    def is_palindrome(self):
+        start=self.head
+        end=self.tail
+        while start.value==end.value and start.next is not None and end.prev is not None:
+            start=start.next
+            end=end.prev
+            if start.next is None:
+                return True
+        return False
 
 
 my_dll_1 = DoublyLinkedList(1)
