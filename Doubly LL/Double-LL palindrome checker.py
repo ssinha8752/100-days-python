@@ -31,11 +31,13 @@ class DoublyLinkedList:
         return True
 
     def is_palindrome(self):
-        start=self.head
-        end=self.tail
-        while start is not None and end is not None and start != end and start.next != end:
+        start = self.head
+        end = self.tail
+        while start is not None and end is not None and start != end:
             if start.value != end.value:
                 return False
+            if start.next == end:
+                break
             start = start.next
             end = end.prev
         return True
