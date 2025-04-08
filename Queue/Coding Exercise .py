@@ -22,7 +22,10 @@ class Stack:
         self.stack_list.append(value)
 
     def pop(self):
-        return self.stack_list.pop()
+        if len(self.stack_list)==0:
+            return None
+        else:
+            return self.stack_list.pop()
 
 
 my_stack = Stack()
