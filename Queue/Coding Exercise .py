@@ -21,11 +21,8 @@ class Stack:
     def push(self, value):
         self.stack_list.append(value)
 
-    # WRITE POP METHOD HERE #
-    #                       #
-    #                       #
-    #                       #
-    #########################
+    def pop(self):
+        return self.stack_list.pop()
 
 
 my_stack = Stack()
