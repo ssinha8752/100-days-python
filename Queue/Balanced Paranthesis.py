@@ -27,15 +27,8 @@ class Stack:
         else:
             return self.stack_list.pop()
 
-
-
-# WRITE IS_BALANCED_PARENTHESES FUNCTION HERE #
-#                                             #
-#    This is a separate function that is      #
-#    not a method within the Stack class.     #
-#    Indent all the way to the left.          #
-#                                             #
-###############################################
+    def is_balanced_parentheses(self,ex):
+        print(ex)
 
 
 
