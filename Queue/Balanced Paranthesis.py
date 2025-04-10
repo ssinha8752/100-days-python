@@ -3,7 +3,7 @@ class Stack:
         self.stack_list = []
 
     def print_stack(self):
-        for i in range(len(self.stack_list) - 1, -1, -1):
+        for i in range(len(self.stack_list)-1, -1, -1):
             print(self.stack_list[i])
 
     def is_empty(self):
@@ -26,85 +26,74 @@ class Stack:
             return None
         else:
             return self.stack_list.pop()
+def is_balanced_parentheses(ex):
+    print(ex)
 
-    def is_balanced_parentheses(self, ex):
-        for char in ex:
-            if char == '(':
-                self.push(char)
-            elif char == ')':
-                if self.is_empty():
-                    return False
-                self.pop()
-        return self.is_empty()
-
-# Test cases
 def test_is_balanced_parentheses():
-    stack = Stack()  # Create an instance of Stack
     try:
-        assert stack.is_balanced_parentheses('((()))') == True
+        assert is_balanced_parentheses('((()))') == True
         print('Test case 1 passed')
     except AssertionError:
         print('Test case 1 failed')
 
     try:
-        assert stack.is_balanced_parentheses('()') == True
+        assert is_balanced_parentheses('()') == True
         print('Test case 2 passed')
     except AssertionError:
         print('Test case 2 failed')
 
     try:
-        assert stack.is_balanced_parentheses('(()())') == True
+        assert is_balanced_parentheses('(()())') == True
         print('Test case 3 passed')
     except AssertionError:
         print('Test case 3 failed')
 
     try:
-        assert stack.is_balanced_parentheses('(()') == False
+        assert is_balanced_parentheses('(()') == False
         print('Test case 4 passed')
     except AssertionError:
         print('Test case 4 failed')
 
     try:
-        assert stack.is_balanced_parentheses('())') == False
+        assert is_balanced_parentheses('())') == False
         print('Test case 5 passed')
     except AssertionError:
         print('Test case 5 failed')
 
     try:
-        assert stack.is_balanced_parentheses(')(') == False
+        assert is_balanced_parentheses(')(') == False
         print('Test case 6 passed')
     except AssertionError:
         print('Test case 6 failed')
 
     try:
-        assert stack.is_balanced_parentheses('') == True
+        assert is_balanced_parentheses('') == True
         print('Test case 7 passed')
     except AssertionError:
         print('Test case 7 failed')
 
     try:
-        assert stack.is_balanced_parentheses('()()()()') == True
+        assert is_balanced_parentheses('()()()()') == True
         print('Test case 8 passed')
     except AssertionError:
         print('Test case 8 failed')
 
     try:
-        assert stack.is_balanced_parentheses('(())(())') == True
+        assert is_balanced_parentheses('(())(())') == True
         print('Test case 9 passed')
     except AssertionError:
         print('Test case 9 failed')
 
     try:
-        assert stack.is_balanced_parentheses('(()()())') == True
+        assert is_balanced_parentheses('(()()())') == True
         print('Test case 10 passed')
     except AssertionError:
         print('Test case 10 failed')
 
     try:
-        assert stack.is_balanced_parentheses('((())') == False
+        assert is_balanced_parentheses('((())') == False
         print('Test case 11 passed')
     except AssertionError:
         print('Test case 11 failed')
 
-# Run test cases
 test_is_balanced_parentheses()
