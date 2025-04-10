@@ -29,15 +29,8 @@ class Stack:
 
 
 
-## WRITE REVERSE_STRING FUNCTION HERE ###
-#                                       #
-#  This is a separate function that is  #
-#  not a method within the Stack class. #
-#  Indent all the way to the left.      #
-#                                       #
-#########################################
-
-
+def reverse_string(exp):
+    return exp
 
 
 my_string = 'hello'
