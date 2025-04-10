@@ -26,8 +26,19 @@ class Stack:
             return None
         else:
             return self.stack_list.pop()
-def is_balanced_parentheses(ex):
-    print(ex)
+def is_balanced_parentheses(expression):
+    stack=[]
+    for chr in expression:
+        if chr=='(':
+            stack.append(chr)
+        elif chr==')':
+            if not stack:
+                return False
+            stack.pop()
+    if len(stack)==0:
+        return True
+    else:
+        return False
 
 def test_is_balanced_parentheses():
     try:
