@@ -30,17 +30,8 @@ class Stack:
 
 
 
-##### WRITE SORT_STACK FUNCTION HERE #####
-#                                        #
-#  This is a separate function that is   #
-#  not a method within the Stack class.  #
-#                                        #
-#  <- INDENT ALL THE WAY TO THE LEFT <-  #
-#                                        #
-##########################################
-
-
-
+def sort_stack(s):
+    return sorted(s)
 
 my_stack = Stack()
 my_stack.push(3)
