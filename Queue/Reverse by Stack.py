@@ -30,8 +30,11 @@ class Stack:
 
 
 def reverse_string(exp):
-    return exp
+    s1=[]
+    for char in exp:
+        s1.append(char)
 
+    return ''.join(s1[::-1])
 
 my_string = 'hello'
 
