@@ -31,7 +31,18 @@ class Stack:
 
 
 def sort_stack(s):
-    return sorted(s)
+    temp_list = []
+    while not s.is_empty():
+        temp_list.append(s.pop())
+
+    # Sort the list
+    temp_list.sort()
+
+    # Push items back into the stack
+    for item in reversed(temp_list):
+        s.push(item)
+
+    return s
 
 my_stack = Stack()
 my_stack.push(3)
