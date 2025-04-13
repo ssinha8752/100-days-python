@@ -1,51 +1,39 @@
-class Node:
-    def __init__(self, value):
-        self.value = value
-        self.next = None
-
-
-class Queue:
-    def __init__(self, value):
-        new_node = Node(value)
-        self.first = new_node
-        self.last = new_node
-        self.length = 1
-
-    def print_queue(self):
-        temp = self.first
-        while temp is not None:
-            print(temp.value)
-            temp = temp.next
+class MyQueue:
+    def __init__(self):
+        self.stack1 = []  # Main stack to store elements
+        self.stack2 = []  # Temporary stack for reordering
 
     def enqueue(self, value):
-        new_node = Node(value)
-        if self.first is None:  # If the queue is empty
-            self.first = new_node
-            self.last = new_node
-        else:  # Add to the end of the queue
-            self.last.next = new_node
-            self.last = new_node
-        self.length += 1
+        # Step 1: Transfer elements from stack1 to stack2
+        while self.stack1:
+            self.stack2.append(self.stack1.pop())
+
+        # Step 2: Add the new value to stack1
+        self.stack1.append(value)
+
+        # Step 3: Transfer elements back from stack2 to stack1
+        while self.stack2:
+            self.stack1.append(self.stack2.pop())
+
+    def peek(self):
+        # Return the element at the front of the queue (last element in stack1)
+        return self.stack1[-1] if self.stack1 else None
+
+    def is_empty(self):
+        # Check if stack1 is empty
+        return len(self.stack1) == 0
 
 
-my_queue = Queue(1)
+# Create a new queue
+q = MyQueue()
 
-print('Queue before enqueue(2):')
-my_queue.print_queue()
+# Enqueue some values
+q.enqueue(1)
+q.enqueue(2)
+q.enqueue(3)
 
-my_queue.enqueue(2)
+# Output the front of the queue
+print("Front of the queue:", q.peek())  # Expected Output: 1
 
-print('\nQueue after enqueue(2):')
-my_queue.print_queue()
-
-"""
-    EXPECTED OUTPUT:
-    ----------------
-    Queue before enqueue(2):
-    1
-
-    Queue after enqueue(2):
-    1
-    2
-
-"""
+# Check if the queue is empty
+print("Is the queue empty?", q.is_empty())  # Expected Output: False
