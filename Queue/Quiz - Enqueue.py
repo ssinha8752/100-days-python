@@ -17,12 +17,15 @@ class Queue:
             print(temp.value)
             temp = temp.next
 
-    ## WRITE ENQUEUE METHOD HERE ##
-    #                             #
-    #                             #
-    #                             #
-    #                             #
-    ###############################
+    def enqueue(self, value):
+        new_node = Node(value)
+        if self.first is None:  # If the queue is empty
+            self.first = new_node
+            self.last = new_node
+        else:  # Add to the end of the queue
+            self.last.next = new_node
+            self.last = new_node
+        self.length += 1
 
 
 my_queue = Queue(1)
