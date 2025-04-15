@@ -10,12 +10,10 @@ class MyQueue:
         while len(self.stack2) > 0:
             self.stack1.append(self.stack2.pop())
 
-    # WRITE DEQUEUE MEHTOD HERE #
-    #                           #
-    #                           #
-    #                           #
-    #                           #
-    #############################
+    def dequeue(self):
+        if not self.is_empty():
+            return self.stack1.pop()
+        return None
 
     def peek(self):
         return self.stack1[-1]
