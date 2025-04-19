@@ -28,6 +28,7 @@ class BST:
                     temp.right=new_node
                     return True
                 temp=temp.right
+
     def contains(self, value):
         if self.root is None:
             return False
