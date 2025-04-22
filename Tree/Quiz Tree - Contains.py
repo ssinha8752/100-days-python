@@ -40,7 +40,7 @@ class BinarySearchTree:
                 temp=temp.right
             else:
                 return True
-        return True
+        return False
 
 
 ##########################################################
