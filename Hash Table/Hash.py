@@ -31,4 +31,6 @@ my_hash_table.set_item('bolts',1400)
 my_hash_table.set_item('washers',50)
 my_hash_table.set_item('lumbers',70)
 
+print(my_hash_table.get_item('bolts'))
+
 my_hash_table.print_table()
