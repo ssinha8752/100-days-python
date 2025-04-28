@@ -1,10 +1,12 @@
-# WRITE FIND_DUPLICATES FUNCTION HERE #
-#                                     #
-#                                     #
-#                                     #
-#                                     #
-#######################################
-
+def find_duplicates(l1):
+    dict={}
+    final=[]
+    for i in l1:
+        if i in dict:
+            final.append(i)
+        else:
+            dict[i]=True
+    return final
 
 
 
