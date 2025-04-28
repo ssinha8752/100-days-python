@@ -3,9 +3,11 @@ def find_duplicates(l1):
     final=[]
     for i in l1:
         if i in dict:
-            final.append(i)
+            if dict[i]==1:
+                final.append(i)
+            dict[i]+=1
         else:
-            dict[i]=True
+            dict[i]=1
     return final
 
 
