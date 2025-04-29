@@ -1,5 +1,19 @@
-def group_anagrams(l1)
+def group_anagrams(l1):
+    if l1 is None:
+        return None
 
+    dict={}
+    answer=[]
+    for i in l1:
+        sw=''.join(sorted(i))
+        if sw not in dict:
+            dict[sw]=[]
+        dict[sw].append(i)
+
+    for key,value in dict.items():
+        answer.append(value)
+
+    return answer
 
 
 print("1st set:")
