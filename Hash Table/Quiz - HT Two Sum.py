@@ -2,11 +2,9 @@ def two_sum(l,t):
     dict={}
     for j,i in enumerate(l):
         comp=t-i
-        if comp in l and comp not in dict and i not in dict:
-            k=l.index(comp)
-            if k>j:
-                return [j,k]
-        dict[i]=True
+        if comp in dict:
+            return [dict[comp],j]
+        dict[i]=j
     return []
 
 print(two_sum([5, 1, 7, 2, 9, 3], 10))
