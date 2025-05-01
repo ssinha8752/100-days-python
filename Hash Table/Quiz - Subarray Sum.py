@@ -5,7 +5,7 @@ def subarray_sum(l,t):
         s+=i
         if s-t in dict:
             return [dict[s-t]+1, j]
-        dict[s] = i
+        dict[s] = j
     return []
 
 
