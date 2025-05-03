@@ -1,11 +1,5 @@
-# WRITE HAS_UNIQUE_CHARS FUNCTION HERE #
-#                                      #
-#                                      #
-#                                      #
-#                                      #
-########################################
-
-
+def has_unique_chars(l1):
+    return len(l1)==len(set(l1))
 
 
 print(has_unique_chars('abcdefg')) # should return True
