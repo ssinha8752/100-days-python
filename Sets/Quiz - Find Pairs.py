@@ -1,10 +1,9 @@
-# WRITE FIND_PAIRS FUNCTION HERE #
-#                                #
-#                                #
-#                                #
-#                                #
-##################################
-
+def find_pairs(l1,l2,t):
+    final=[]
+    for i in l1:
+        if t-i in l2:
+            final.append((i,t-i))
+    return final
 
 
 
