@@ -29,6 +29,13 @@ class Graph:
             return True
         return False
 
+    def remove_vertex(self, v):
+        if v in self.adj_list.keys():
+            for i in self.adj_list[v]:
+                self.adj_list[i].remove(v)
+            del self.adj_list[v]
+            return True
+        return False
 
 my_graph=Graph()
 my_graph.add_vertex('A')
