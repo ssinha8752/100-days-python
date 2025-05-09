@@ -8,13 +8,14 @@ class Graph:
 
     def add_vertex(self,v):
         if v not in self.adj_list.keys():
-            self.adj_list[v]={}
+            self.adj_list[v]=[]
             return True
         return False
 
 
 my_graph = Graph()
 
+my_graph.add_vertex('A')
 my_graph.add_vertex('A')
 
 my_graph.print_graph()
