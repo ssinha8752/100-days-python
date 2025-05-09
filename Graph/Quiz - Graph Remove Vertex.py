@@ -33,13 +33,13 @@ class Graph:
             return True
         return False
 
-    ## WRITE REMOVE_VERTEX METHOD HERE ##
-    #                                   #
-    #                                   #
-    #                                   #
-    #                                   #
-    #####################################
-
+    def remove_vertex(self,v):
+        if v in self.adj_list.keys():
+            for i in self.adj_list[v]:
+                self.adj_list[i].remove(v)
+            del self.adj_list[v]
+            return True
+        return False
 
 
 
