@@ -24,8 +24,6 @@ class Graph:
         return False
 
 
-
-
 my_graph = Graph()
 
 my_graph.add_vertex(1)
