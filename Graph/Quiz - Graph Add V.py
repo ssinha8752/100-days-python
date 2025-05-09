@@ -7,8 +7,10 @@ class Graph:
             print(vertex, ':', self.adj_list[vertex])
 
     def add_vertex(self,v):
-
-
+        if v not in self.adj_list.keys():
+            self.adj_list[v]={}
+            return True
+        return False
 
 
 my_graph = Graph()
