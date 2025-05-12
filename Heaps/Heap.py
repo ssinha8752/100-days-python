@@ -22,3 +22,12 @@ class MaxHeap:
         while current>0 and self.heap[current] > self.heap[self._parent(current)]:
             self._swap(current,self._parent(current))
             current=self._parent(current)
+
+
+myheap=MaxHeap()
+myheap.insert(99)
+myheap.insert(72)
+myheap.insert(61)
+myheap.insert(58)
+
+print(myheap)
