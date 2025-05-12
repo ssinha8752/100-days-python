@@ -30,4 +30,4 @@ myheap.insert(72)
 myheap.insert(61)
 myheap.insert(58)
 
-print(myheap)
+print(myheap.heap)
