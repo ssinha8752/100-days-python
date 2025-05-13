@@ -23,6 +23,16 @@ class MaxHeap:
             self._swap(current,self._parent(current))
             current=self._parent(current)
 
+    def remove(self):
+        if len(self.heap)==0:
+            return None
+        if len(self.heap)==1:
+            return self.heap.pop()
+        max_val=self.heap[0]
+        self.heap[0]=self.heap.pop()
+        self.__sink_down(0)
+        return max_val
+
 
 myheap=MaxHeap()
 myheap.insert(99)
