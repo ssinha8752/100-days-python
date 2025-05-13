@@ -1,16 +1,9 @@
-def checkPerfectNumber(num):
-    """
-    :type num: int
-    :rtype: bool
-    """
-    sum = 0
-    for i in range(1, num//2+1):
-        if num%i==0:
-            sum+=i
+def maximumProduct(nums):
+    prod=1
+    max3=sorted(nums, key=abs, reverse=True)[:-3]
+    for i in max3:
+        prod=prod*i
+    print(max3)
+    return prod
 
-    if sum==num:
-        return True
-    else:
-        return False
-
-print(checkPerfectNumber(7))
+print(maximumProduct([-100,-98,-1,2,3,4]))
