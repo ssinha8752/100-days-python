@@ -1,11 +1,9 @@
-def maximumProduct(nums):
-    nums.sort()  # Sort the array in ascending order
+def addTwoNumbers(l1, l2):
+        print(l1,l2)
+        a=l1[::-1]
+        b=l2[::-1]
+        n1="".join(map(str,a))
+        n2 = "".join(map(str, b))
+        return int(n1)+int(n2)
 
-    # Case 1: Product of the top three largest values
-    option1 = nums[-1] * nums[-2] * nums[-3]
-
-    # Case 2: Product of two smallest values (which may be negative) and the largest value
-    option2 = nums[0] * nums[1] * nums[-1]
-    return max(option1, option2)
-
-print(maximumProduct([-1,-2,-3]))
+print(addTwoNumbers([2,4,3],[5,6,4]))
