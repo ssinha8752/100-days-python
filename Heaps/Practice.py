@@ -1,9 +1,11 @@
-def addTwoNumbers(l1, l2):
-        print(l1,l2)
-        a=l1[::-1]
-        b=l2[::-1]
-        n1="".join(map(str,a))
-        n2 = "".join(map(str, b))
-        return int(n1)+int(n2)
+def rev(x):
+        """
+        :type x: int
+        :rtype: int
+        """
+        sign = -1 if x < 0 else 1
+        reversed_num = int(str(abs(x))[::-1])
+        return sign * reversed_num
 
-print(addTwoNumbers([2,4,3],[5,6,4]))
+
+print(rev(-120))
