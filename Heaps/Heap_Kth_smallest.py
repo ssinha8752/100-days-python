@@ -55,17 +55,26 @@ class MaxHeap:
 
         return max_value
 
+def find_kth_smallest(arr,k):
+    if k > len(arr):
+        return None  # Return None if k is out of range
 
-#### WRITE FIND_KTH_SMALLEST FUNCTION HERE ####
-#                                             #
-#    This is a separate function that is      #
-#    not a method within the Heap class.      #
-#    Indent all the way to the left.          #
-#                                             #
-###############################################
+    max_heap = MaxHeap()
+
+    # Insert first k elements into the max heap
+    for num in arr[:k]:
+        max_heap.insert(num)
+
+    # For the rest of the elements, maintain the max heap of k smallest elements
+    for num in arr[k:]:
+        if num < max_heap.heap[0]:  # Compare with the max element in the heap
+             max_heap.remove()  # Remove the largest element
+             max_heap.insert(num)  # Insert the new element
+
+    return max_heap.heap[0]
 
 
-# Test cases
+    # Test cases
 nums = [[3, 2, 1, 5, 6, 4], [6, 5, 4, 3, 2, 1], [1, 2, 3, 4, 5, 6], [3, 2, 3, 1, 2, 4, 5, 5, 6]]
 ks = [2, 3, 4, 7]
 expected_outputs = [2, 3, 4, 5]
