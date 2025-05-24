@@ -56,14 +56,13 @@ class MaxHeap:
         return max_value
 
 
-###### WRITE STREAM_MAX FUNCTION HERE ######
-#                                          #
-#   This is a separate function that is    #
-#   not a method within the Heap class.    #
-#   Indent all the way to the left.        #
-#                                          #
-############################################
-
+def stream_max(nums):
+    max_heap = MaxHeap()
+    result = []
+    for num in nums:
+        max_heap.insert(num)
+        result.append(max_heap.heap[0])  # Append the maximum element (root of the heap)
+    return result
 
 test_cases = [
     ([], []),
