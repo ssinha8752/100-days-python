@@ -5,3 +5,7 @@ def __r_contains(self,current_node,value):
         return True
     if value<current_node.value:
         return self.__r_contains(current_node.left,value)
+
+
+def r_contains(self,value):
+    return self.__r_contains(self.root,value)
