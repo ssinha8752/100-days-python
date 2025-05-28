@@ -8,4 +8,6 @@ def __r_insert(self, current_node, value):
     return current_node
 
 def r_insert(self,value):
+    if self.root==None:
+        self.root=Node(value)
     self.__r_insert(self.root,value)
