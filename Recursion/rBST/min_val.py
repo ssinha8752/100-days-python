@@ -55,6 +55,11 @@ class BST:
     def r_contains(self, value):
         return self.__r_contains(self.root, value)
 
+    def min_val(self, current_node):
+        while current_node.left is not None:
+            current_node = current_node.left
+        return current_node.value
+
 
 my_tree=BST()
 my_tree.insert(2)
@@ -67,3 +72,4 @@ print(my_tree.root.left.value)
 print(my_tree.root.right.value)
 print(my_tree.r_contains(3))
 print(my_tree.r_contains(5))
+print(my_tree.min_val(my_tree.root))
