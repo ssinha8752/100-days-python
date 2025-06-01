@@ -75,10 +75,13 @@ class BST:
             elif current_node.right == None:
                 current_node = current_node.left
             else:
-                return current_node
+                sub_tree_main=self.min_val(current_node.right)
+                current_node.value=sub_tree_main
+                current_node.right=self.__delete_node(current_node.right, sub_tree_main)
+        return current_node
 
     def delete_node(self, value):
-        self.__delete_node()
+        self.__delete_node(self.root,value)
 
 
 my_tree=BST()
@@ -93,3 +96,5 @@ print(my_tree.root.right.value)
 print(my_tree.r_contains(3))
 print(my_tree.r_contains(5))
 print(my_tree.min_val(my_tree.root))
+
+my_tree.delete_node(3)
