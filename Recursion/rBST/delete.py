@@ -98,3 +98,6 @@ print(my_tree.r_contains(5))
 print(my_tree.min_val(my_tree.root))
 
 my_tree.delete_node(3)
+
+print(my_tree.root.value)
+print(my_tree.root.left.value)
