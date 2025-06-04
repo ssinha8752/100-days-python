@@ -101,4 +101,3 @@ my_tree.delete_node(3)
 
 print(my_tree.root.value)
 print(my_tree.root.left.value)
-
