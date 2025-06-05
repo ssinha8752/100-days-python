@@ -29,12 +29,18 @@ class BinarySearchTree:
                     return True
                 temp = temp.right
 
-    ## WRITE R_CONTAINS METHODS HERE ##
-    #                                 #
-    #                                 #
-    #                                 #
-    #                                 #
-    ###################################
+    def r_contains(self, value):
+        if self.root is None:
+            return False
+        temp = self.root
+        while temp is not None:
+            if value < temp.value:
+                temp = temp.left
+            elif value > temp.value:
+                temp = temp.right
+            else:
+                return True
+        return False
 
 
 my_tree = BinarySearchTree()
