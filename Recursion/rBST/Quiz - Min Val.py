@@ -29,7 +29,7 @@ class BinarySearchTree:
                     return True
                 temp = temp.right
 
-    def min_val(self, current_node):
+    def min_value(self, current_node):
         while current_node.left is not None:
             current_node = current_node.left
         return current_node.value
