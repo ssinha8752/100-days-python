@@ -45,34 +45,16 @@ class BinarySearchTree:
         self.root = self.__sorted_list_to_bst(nums, 0, len(nums) - 1)
 
     def __sorted_list_to_bst(self, nums, left, right):
+        if left > right:
+            return None
 
+        mid = (left + right) // 2
+        node = Node(nums[mid])
 
-#   +====================================================+
-#   |               WRITE YOUR CODE HERE                 |
-#   | Description:                                       |
-#   | - Private method to convert a sorted list to a     |
-#   |   binary search tree (BST).                        |
-#   | - The method uses the middle element of the list   |
-#   |   as the root to ensure balanced height.           |
-#   |                                                    |
-#   | Parameters:                                        |
-#   | - nums: Sorted list of integers.                   |
-#   | - left: Starting index of the list segment.        |
-#   | - right: Ending index of the list segment.         |
-#   |                                                    |
-#   | Return:                                            |
-#   | - The root node of the BST created from the        |
-#   |   specified list segment.                          |
-#   |                                                    |
-#   | Tips:                                              |
-#   | - The function is recursively called to construct  |
-#   |   the left and right subtrees.                     |
-#   | - A new Node is created at each recursive call     |
-#   |   with the mid element of the current list segment |
-#   |   as its value, ensuring the BST property is       |
-#   |   maintained.                                      |
-#   +====================================================+
+        node.left = self.__sorted_list_to_bst(nums, left, mid - 1)
+        node.right = self.__sorted_list_to_bst(nums, mid + 1, right)
 
+        return node
 
 #  +====================================================+
 #  |  Test code below will print output to "User logs"  |
