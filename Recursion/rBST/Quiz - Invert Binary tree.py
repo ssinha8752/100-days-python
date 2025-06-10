@@ -27,7 +27,15 @@ class BinarySearchTree:
     def invert(self):
         self.root = self.__invert_tree(self.root)
 
-
+    def __invert_tree(self, node):
+        if node is None:
+            return None
+        # Swap left and right children
+        node.left, node.right = node.right, node.left
+        # Recursively invert children
+        node.left = self.__invert_tree(node.left)
+        node.right = self.__invert_tree(node.right)
+        return node
 
 
 #  +====================================================+
