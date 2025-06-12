@@ -81,5 +81,4 @@ def test_invert_binary_search_tree():
         print(f"Expected: {expected}")
         print(f"Actual:   {result}")
 
-
 test_invert_binary_search_tree()
