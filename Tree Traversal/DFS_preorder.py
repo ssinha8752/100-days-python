@@ -63,6 +63,7 @@ class BinarySearchTree:
             if current_node.left is not None:
                 traverse(current_node.left)
             if current_node.right is not None:
+
                 traverse(current_node.right)
 
         traverse(self.root)
