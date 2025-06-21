@@ -42,12 +42,7 @@ class BinarySearchTree:
                 return True
         return False
 
-    ### WRITE BFS METHOD HERE ###
-    #                           #
-    #                           #
-    #                           #
-    #                           #
-    #############################
+
 
 
 my_tree = BinarySearchTree()
