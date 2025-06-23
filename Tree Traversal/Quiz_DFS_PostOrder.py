@@ -70,7 +70,7 @@ class BinarySearchTree:
         traverse(self.root)
         return results
 
-    def DFS_post_order(self):
+    def dfs_post_order(self):
         results = []
 
         def traverse(current_node):
