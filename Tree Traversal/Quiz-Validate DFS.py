@@ -42,12 +42,17 @@ class BinarySearchTree:
         traverse(self.root)
         return results
 
-    # WRITE IS_VALID_BST METHOD HERE #
-    #                                #
-    #                                #
-    #                                #
-    #                                #
-    ##################################
+    def is_valid_bst(self):
+        def validate(node, min_val, max_val):
+            if node is None:
+                return True
+            if not (min_val < node.value < max_val):
+                return False
+            return (validate(node.left, min_val, node.value) and
+                    validate(node.right, node.value, max_val))
+
+        return validate(self.root, float('-inf'), float('inf'))
+
 
 
 my_tree = BinarySearchTree()
