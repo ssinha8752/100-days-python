@@ -27,12 +27,21 @@ class LinkedList:
             self.tail = new_node
         self.length += 1
 
-    # WRITE SELECTION_SORT METHOD HERE #
-    #                                  #
-    #                                  #
-    #                                  #
-    #                                  #
-    ####################################
+    def selection_sort(self):
+        if self.head is None or self.head.next is None:
+            return
+
+        current = self.head
+        while current:
+            min_node = current
+            next_node = current.next
+            while next_node:
+                if next_node.value < min_node.value:
+                    min_node = next_node
+                next_node = next_node.next
+            # Swap the values instead of the nodes
+            current.value, min_node.value = min_node.value, current.value
+            current = current.next
 
 
 my_linked_list = LinkedList(4)
