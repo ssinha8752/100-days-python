@@ -43,7 +43,6 @@ class LinkedList:
             current.value, min_node.value = min_node.value, current.value
             current = current.next
 
-
 my_linked_list = LinkedList(4)
 my_linked_list.append(2)
 my_linked_list.append(6)
