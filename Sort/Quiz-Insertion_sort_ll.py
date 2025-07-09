@@ -27,12 +27,37 @@ class LinkedList:
             self.tail = new_node
         self.length += 1
 
-    # WRITE INSERTION_SORT METHOD HERE #
-    #                                  #
-    #                                  #
-    #                                  #
-    #                                  #
-    ####################################
+    def insertion_sort(self):
+        if self.head is None or self.head.next is None:
+            return
+
+        sorted_head = self.head
+        current = self.head.next
+        sorted_head.next = None
+
+        while current:
+            next_unsorted = current.next
+
+            if current.value < sorted_head.value:
+                # Insert at the beginning
+                current.next = sorted_head
+                sorted_head = current
+            else:
+                search = sorted_head
+                while search.next and search.next.value < current.value:
+                    search = search.next
+
+                current.next = search.next
+                search.next = current
+
+            current = next_unsorted
+
+        # Update head and tail
+        self.head = sorted_head
+        temp = self.head
+        while temp.next:
+            temp = temp.next
+        self.tail = temp
 
 
 my_linked_list = LinkedList(4)
