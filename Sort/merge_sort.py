@@ -19,3 +19,6 @@ def merge(l1,l2):
         j+=1
 
     return combined
+
+
+print(merge([1,3,5,7],[2,4,6,8]))
