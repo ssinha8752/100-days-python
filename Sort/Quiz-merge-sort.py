@@ -42,25 +42,23 @@ class LinkedList:
                 p2 = p2.next
             tail = tail.next
 
-        # Append remaining nodes
-        if p1:
-            tail.next = p1
-        if p2:
-            tail.next = p2
+        # Attach any remaining nodes
+        tail.next = p1 if p1 else p2
 
-        # Update head and tail
+        # Update self.head
         self.head = dummy.next
-        temp = self.head
-        while temp.next:
-            temp = temp.next
-        self.tail = temp
 
-        # Recalculate length
-        self.length = 0
-        temp = self.head
-        while temp:
-            self.length += 1
-            temp = temp.next
+        # Update self.tail safely
+        if self.head is None:
+            self.tail = None
+            self.length = 0
+        else:
+            temp = self.head
+            self.length = 1
+            while temp.next:
+                temp = temp.next
+                self.length += 1
+            self.tail = temp
 
 
 l1 = LinkedList(1)
