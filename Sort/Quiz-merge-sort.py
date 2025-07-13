@@ -27,12 +27,40 @@ class LinkedList:
             self.tail = new_node
         self.length += 1
 
-    # WRITE MERGE METHOD HERE #
-    #                         #
-    #                         #
-    #                         #
-    #                         #
-    ###########################
+    def merge(self, other_list):
+        dummy = Node(0)
+        tail = dummy
+        p1 = self.head
+        p2 = other_list.head
+
+        while p1 and p2:
+            if p1.value < p2.value:
+                tail.next = p1
+                p1 = p1.next
+            else:
+                tail.next = p2
+                p2 = p2.next
+            tail = tail.next
+
+        # Append remaining nodes
+        if p1:
+            tail.next = p1
+        if p2:
+            tail.next = p2
+
+        # Update head and tail
+        self.head = dummy.next
+        temp = self.head
+        while temp.next:
+            temp = temp.next
+        self.tail = temp
+
+        # Recalculate length
+        self.length = 0
+        temp = self.head
+        while temp:
+            self.length += 1
+            temp = temp.next
 
 
 l1 = LinkedList(1)
