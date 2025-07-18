@@ -12,5 +12,5 @@ def fib(n):
 
 # Example usage
 
-print(fib(10))  # Output: 55
-print(counter)
+print(fib(7))  # Output: 55
+print(counter) # O(2n-1)
