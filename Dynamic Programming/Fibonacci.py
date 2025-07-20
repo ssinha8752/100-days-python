@@ -11,6 +11,5 @@ def fib(n):
     return memo[n]
 
 # Example usage
-
 print(fib(7))  # Output: 55
 print(counter) # O(2n-1)
