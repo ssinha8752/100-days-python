@@ -10,6 +10,7 @@ def fib(n):
     memo[n]= fib(n-1)+fib(n-2)
     return memo[n]
 
+
 # Example usage
 print(fib(7))  # Output: 55
 print(counter) # O(2n-1)
