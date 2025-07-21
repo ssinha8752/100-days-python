@@ -1,10 +1,12 @@
-# WRITE THE REMOVE_ELEMENT FUNCTION HERE #
-#                                        #
-#                                        #
-#                                        #
-#                                        #
-##########################################
-
+def remove_element(nums, val):
+    i = 0  # Pointer to track position of elements to keep
+    for j in range(len(nums)):
+        if nums[j] != val:
+            nums[i] = nums[j]
+            i += 1
+    # Optional: truncate the list to the new length (not needed for most in-place algorithms)
+    nums[:] = nums[:i]
+    return i
 
 
 
