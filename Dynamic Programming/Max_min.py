@@ -1,10 +1,5 @@
-# WRITE FIND_MAX_MIN FUNCTION HERE #
-#                                  #
-#                                  #
-#                                  #
-#                                  #
-####################################
-
+def find_max_min(l):
+    return (min(l),max(l))
 
 print(find_max_min([5, 3, 8, 1, 6, 9]))
 
