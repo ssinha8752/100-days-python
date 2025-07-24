@@ -1,9 +1,13 @@
-# WRITE REMOVE_DUPLICATES FUNCTION HERE #
-#                                       #
-#                                       #
-#                                       #
-#                                       #
-#########################################
+def remove_duplicates(my_list):
+    freq_dict = {}
+
+    for item in my_list:
+        if item in freq_dict:
+            freq_dict[item] += 1
+        else:
+            freq_dict[item] = 1
+
+    print(freq_dict)
 
 
 # Test case 1: Empty list
