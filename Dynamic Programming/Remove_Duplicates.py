@@ -1,13 +1,15 @@
-def remove_duplicates(my_list):
-    freq_dict = {}
+# WRITE REMOVE_DUPLICATES FUNCTION HERE #
+def remove_duplicates(nums):
+    if not nums:
+        return 0
 
-    for item in my_list:
-        if item in freq_dict:
-            freq_dict[item] += 1
-        else:
-            freq_dict[item] = 1
+    write_index = 1  # Start writing from index 1
+    for i in range(1, len(nums)):
+        if nums[i] != nums[write_index - 1]:
+            nums[write_index] = nums[i]
+            write_index += 1
 
-    print(freq_dict)
+    return write_index
 
 
 # Test case 1: Empty list
