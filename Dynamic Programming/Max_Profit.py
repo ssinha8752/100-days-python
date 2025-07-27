@@ -2,7 +2,7 @@ def max_profit(p):
     min_n=min(p)
     min_id=p.index(min_n)
     max_n=max(p[min_id:])
-    print(max_n-min_n)
+    return max_n-min_n
 
 prices = [7, 1, 5, 3, 6, 4]
 profit = max_profit(prices)
