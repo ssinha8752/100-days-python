@@ -1,9 +1,3 @@
-# WRITE THE MAX_SUBARRAY FUNCTION HERE #
-#                                      #
-#                                      #
-#                                      #
-#                                      #
-########################################
 
 
 # Example 1: Simple case with positive and negative numbers
