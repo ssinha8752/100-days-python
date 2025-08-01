@@ -41,3 +41,15 @@ print(np.sum(a8,axis=0))
 print(np.sum(a8,axis=1))
 
 #sub,multiply,divide,sin,cos,tan,sqrt,exp,log,min,median,min,max, std, array1 + array2
+
+#slicing & indexing
+
+arr1=np.array([1,2,3,4,5])
+arr2=np.array([[1,2,3],[4,5,6]])
+
+print(arr1[1:4])
+print(arr1[-2])
+
+print(arr2[0][1:])
+
+print(arr2[:][1:])
