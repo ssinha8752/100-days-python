@@ -43,7 +43,6 @@ print(np.sum(a8,axis=1))
 #sub,multiply,divide,sin,cos,tan,sqrt,exp,log,min,median,min,max, std, array1 + array2
 
 #slicing & indexing
-
 arr1=np.array([1,2,3,4,5])
 arr2=np.array([[1,2,3],[4,5,6]])
 
