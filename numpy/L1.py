@@ -52,3 +52,4 @@ print(arr1[-2])
 print(arr2[0][1:])
 
 print(arr2[:][1:])
+
